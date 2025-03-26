@@ -1,0 +1,18 @@
+name: Database Access
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  database-access:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Access database
+        run: |
+          curl -X GET \
+          https://api.github.com/repos/FidzzHost/Fidzz/contents/database.json \
+          -H 'Authorization: Bearer YOUR_GITHUB_TOKEN'
