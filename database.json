@@ -1,4 +1,6 @@
-{
-  "nomor": ["62895410790928"],
-  "token": ["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"]
-}
+bash
+curl -X PATCH \
+  https://api.github.com/repos/FidzzHost/Fidzz/contents/database.json \
+  -H 'Authorization: Bearer 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' \
+  -H 'Content-Type: application/json' \
+  -d '{"nomor": ["62895410790928", "6281234567890"], "token": ["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"]}'
